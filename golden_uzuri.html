@@ -321,5 +321,13 @@
   &copy; 2026 <span>Golden Uzuri</span> — Tous droits réservés
 </footer>
 
+<audio id="bg-audio" src="son_2.mp3" preload="auto" autoplay loop></audio>
+<script>
+  const bgAudio = document.getElementById('bg-audio');
+  const tryPlayAudio = () => bgAudio.play().catch(() => {});
+  window.addEventListener('load', tryPlayAudio);
+  document.addEventListener('click', tryPlayAudio, { once: true });
+</script>
+
 </body>
 </html>
